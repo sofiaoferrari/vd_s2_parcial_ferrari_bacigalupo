@@ -1,4 +1,4 @@
-d3.csv('data/data2000.csv', d3.autoType).then(data => {
+d3.csv('data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data => {
   let chart = Plot.plot({
     width: 600,
     height: 200,
