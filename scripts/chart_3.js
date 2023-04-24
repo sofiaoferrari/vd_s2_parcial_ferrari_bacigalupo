@@ -1,27 +1,19 @@
-let chart
-d3.csv('data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data => {
-  chart = Plot.plot({
+d3.dsv(";","./data/147_vehiculos_mal_estacionados.csv", d3.autoType).then((data) => {
+  let dataPalermo = data.filter(d => d.domicilio_barrio == "PALERMO");
+  let dataCalle = dataPalermo.filter(d => d.domicilio_calle == ""); 
+  let chart = Plot.plot({
     marks: [
-      Plot.dot(data, {
-        x: 'fertility',
-        y: 'life_expect',
-        r: 'pop',
-        fill: 'cluster',
-        opacity: 0.4,
-      }),
-      Plot.text(data, {
-        x: 'fertility',
-        y: 'life_expect',
-        text: d => (d.pop > 100000000 ? d.country : ''),
-      }),
+      Plot.barY(
+        dataPalermo,
+        Plot.groupX({ y: "sum" }, { x: "canal"})
+      )
     ],
-    grid: true,
-    line: true,
-    nice: true,
-    color: {
-      legend: true,
+    style: {
+      color: "#B41818",
+      fontSize: "12px",
     },
-  })
-
-  d3.select('#chart_3').append(() => chart)
-})
+    height: 300,
+    width: 800,
+  });
+  d3.select("#chart_3").append(() => chart);
+});
