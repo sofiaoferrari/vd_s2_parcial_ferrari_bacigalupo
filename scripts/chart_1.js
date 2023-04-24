@@ -4,7 +4,7 @@ const dataFetch = d3.dsv(';', './data/147_vehiculos_mal_estacionados.csv', d3.au
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   
   /* Agrupamos reclamos x barrio */
-  const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio) // crea un Map
+  const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio) 
   console.log('reclamosPorBarrio', reclamosPorBarrio)
   
   /* A cada feature del mapa le agregamos la prop DENUNCIAS */
@@ -15,20 +15,16 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
 
     console.log(nombreBarrio + ': ' + cantReclamos)
   })
-
-
   /* Mapa Coroplético */
   let chartMap = Plot.plot({
-    // https://github.com/observablehq/plot#projection-options
     projection: {
       type: 'mercator',
-      domain: barrios, // Objeto GeoJson a encuadrar
+      domain: barrios, 
     },
     color: {
-      // Quantize continuo (cant. denuncias) -> discreto (cant. colores)
       type: 'quantize', 
       n: 10,
-      scheme: 'ylorbr',
+      scheme: 'cividis',
       label: 'Cantidad de denuncias',
       legend: true,
     },
@@ -51,7 +47,5 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       )
     ],
   })
-
-  /* Agregamos al DOM la visualización chartMap */
   d3.select('#chart_1').append(() => chartMap)
 })
