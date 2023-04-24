@@ -1,29 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@1;100;200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap');
 
-*{
-    font-family: 'Ubuntu', sans-serif;
+body {
+    font-family: 'Ysabeau', sans-serif;
+    color: #0E2372; 
 }
-section{
-    margin-left: 10%;
-    margin-right: 10%;
+
+#inicio {
+    font-size: 30px;
+    padding: 60px 150px 20px 150px;
+    font-weight: 600;
+    color:#0E2372;
+}
+
+header {
+    background-color: #FFDC00;
+    color:white; 
     text-align: center;
+    height: 230px;
 }
+
 h1{
-    font-size: 3em;
-    margin: 0.5em;
+    font-size: 70px;
+    padding: 50px 0px 10px 0px;
+    margin: 10px; 
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color:#B41818;
 }
+
 h2{
     font-size: 2em;
-    margin: 0.5em 0 0.5em 0;
+    margin: 10px; 
+    padding: 10px 0px 30px;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color:#B41818;
 }
+
+section{
+    text-align: center;
+}
+
+#palermo{
+    font-size: 60px;
+    color:#0E2372;
+}
+
+.info-text {
+    line-height: 25px;
+}
+
 h3{
-    font-size: 1.8em;
-    margin: 2em 0 0.5em 0.5em;
+    font-size: 38px;
+    font-family: 'Lora', serif;
+    padding: 50px 0px 10px 0px;
+    color: #0E2372;
 }
+
+.graf {
+    padding:10px; 
+    margin: 5px;
+}
+
 p{
-    font-size: 1.2em;
-    margin: 0.5em;
+    font-size: 20px;
+    padding: 0px 100px 0px 100px;
 }
+
+small {
+    color: #B41818;
+}
+
+footer {
+    font-size: 0.8em;
+    background-color:#B41818;
+    color:#FFDC00; 
+    text-align: center;
+    height: 100px;
+}
+
+footer p {
+    padding: 15px 0px 7px 0px;
+}
+
 #chart_1 svg, #chart_2 svg, #chart_3 svg {
     max-width: initial;
     margin-left: auto;
