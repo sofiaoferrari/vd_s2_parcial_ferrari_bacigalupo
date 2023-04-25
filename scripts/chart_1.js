@@ -23,7 +23,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     },
     color: {
       type: 'quantize', 
-      n: 10,
+      n: 8,
       scheme: 'cividis',
       label: 'Cantidad de denuncias',
       legend: true,
