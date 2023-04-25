@@ -21,7 +21,7 @@ header {
 }
 
 h1{
-    font-size: 70px;
+    font-size: 60px;
     padding: 50px 0px 10px 0px;
     margin: 10px; 
     font-family: 'Lora', serif;
@@ -30,9 +30,9 @@ h1{
 }
 
 h2{
-    font-size: 2em;
-    margin: 10px; 
-    padding: 10px 0px 30px;
+    font-size: 30px;
+    margin: 0px 20px 0px 20px;
+    padding: 10px 20px 30px 20px;
     font-family: 'Lora', serif;
     font-weight: 400;
     color:#B41818;
@@ -51,6 +51,11 @@ section{
     line-height: 25px;
 }
 
+.info-text-final {
+    line-height: 25px;
+    padding: 20px 20px 30px 50px;
+}
+
 h3{
     font-size: 38px;
     font-family: 'Lora', serif;
@@ -58,22 +63,41 @@ h3{
     color: #0E2372;
 }
 
-.graf {
+h5{
+    font-size: 40px;
+    font-family: 'Lora', serif;
+    padding: 50px 0px 0px 0px;
+    color: #0E2372;
+    font-weight: 500;
+}
+
+.graf-palermo {
+    padding:10px; 
+    margin: 5px;
+}
+
+.graf1 {
+    padding:10px; 
+    margin: 5px;
+}
+
+.graf2 {
     padding:10px; 
     margin: 5px;
 }
 
 p{
     font-size: 20px;
-    padding: 0px 100px 0px 100px;
+    padding: 10px 100px 0px 100px;
 }
 
 small {
     color: #B41818;
+    padding: 10px 10px 20px 10px;
 }
 
 footer {
-    font-size: 0.8em;
+    font-size: 0.1em;
     background-color:#B41818;
     color:#FFDC00; 
     text-align: center;
@@ -81,7 +105,12 @@ footer {
 }
 
 footer p {
-    padding: 15px 0px 7px 0px;
+    font-size: 14px;
+    padding: 10px 0px 5px 0px;
+}
+
+a {
+    color:#FFDC00; 
 }
 
 #chart_1 svg, #chart_2 svg, #chart_3 svg {
@@ -91,3 +120,5 @@ footer p {
     margin-top: 3em;
     margin-bottom: 3em;
 }
+
+
