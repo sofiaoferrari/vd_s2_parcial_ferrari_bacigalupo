@@ -3,18 +3,28 @@
 
 body {
     font-family: 'Ysabeau', sans-serif;
-    color: #0E2372; 
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFBEB;
 }
 
+section, #graf {
+    width: 1420px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 #inicio {
-    font-size: 30px;
-    padding: 60px 150px 20px 150px;
+    width: auto;
+    font-size: 28px;
     font-weight: 600;
-    color:#0E2372;
+    
 }
 
 header {
-    background-color: #FFDC00;
+    background-color: #FFED51;
     color:white; 
     text-align: center;
     height: 230px;
@@ -30,9 +40,9 @@ h1{
 }
 
 h2{
-    font-size: 30px;
+    font-size: 28px;
     margin: 0px 20px 0px 20px;
-    padding: 10px 20px 30px 20px;
+    padding: 14px 20px 30px 20px;
     font-family: 'Lora', serif;
     font-weight: 400;
     color:#B41818;
@@ -40,7 +50,9 @@ h2{
 
 section{
     text-align: center;
+    margin-bottom: 20px;
 }
+
 
 #palermo{
     font-size: 60px;
@@ -49,26 +61,28 @@ section{
 
 .info-text {
     line-height: 25px;
+    width:auto;
 }
 
 .info-text-final {
     line-height: 25px;
-    padding: 20px 20px 30px 50px;
 }
 
 h3{
-    font-size: 38px;
+    font-size: 36px;
     font-family: 'Lora', serif;
-    padding: 50px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
     color: #0E2372;
 }
 
 h5{
     font-size: 40px;
     font-family: 'Lora', serif;
-    padding: 50px 0px 0px 0px;
+    padding: 20px 0px 20px 0px;
     color: #0E2372;
     font-weight: 500;
+    margin-top: 20px;
+
 }
 
 .graf-palermo {
@@ -82,43 +96,59 @@ h5{
 }
 
 .graf2 {
-    padding:10px; 
+    padding:10px;
     margin: 5px;
 }
 
 p{
-    font-size: 20px;
-    padding: 10px 100px 0px 100px;
+    width: 960;
+    font-size: 26px;
+    padding: 40px 100px 50px 100px;
 }
 
 small {
+    font-size: 18px;
     color: #B41818;
-    padding: 10px 10px 20px 10px;
+    padding: 40px 40px 10px 10px;
+    
 }
 
 footer {
+    clear: left;
     font-size: 0.1em;
     background-color:#B41818;
-    color:#FFDC00; 
-    text-align: center;
+    color:#FFEDA1; 
+  
     height: 100px;
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 18px;
     padding: 10px 0px 5px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
 }
 
 a {
-    color:#FFDC00; 
+    color:#FFED51; 
+}
+
+#chart_2 svg {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#chart_3 svg {
+    margin-top: 60px;
 }
 
 #chart_1 svg, #chart_2 svg, #chart_3 svg {
     max-width: initial;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-bottom: 10px;
 }
 
 

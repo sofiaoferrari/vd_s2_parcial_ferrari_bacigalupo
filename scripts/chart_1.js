@@ -20,6 +20,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
     projection: {
       type: 'mercator',
       domain: barrios, 
+      
     },
     color: {
       type: 'quantize', 
@@ -27,6 +28,12 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       scheme: 'cividis',
       label: 'Cantidad de denuncias',
       legend: true,
+      style: {
+        backgroundColor: "#FFFBEB",
+      },
+    },
+    style: {
+      backgroundColor: "#FFFBEB",
     },
     marks: [
       Plot.geo(barrios, {
@@ -38,8 +45,8 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
         barrios.features,
         Plot.centroid({
           text: (d) => d.properties.BARRIO,
-          fill: "currentColor",
-          stroke: "white",
+          fill: "white",
+          stroke: "currentColor",
           textAnchor: "center",
           dx: 4,
           filter: (d) => d.properties.DENUNCIAS > 80

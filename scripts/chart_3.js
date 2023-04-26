@@ -12,26 +12,36 @@ d3.dsv(";","./data/147_vehiculos_mal_estacionados.csv", d3.autoType).then((data)
           Plot.group({r: "count"}, {
             y: "domiclio_calle", 
             x: "solo_hora_ingreso",
-          }))
+            fill: "count",
+          })),        
       ],
+
       style: {
         overflow: "visible",
         fontSize: "14px",
+        backgroundColor: "#FFFBEB",
       },
-      margin:45, 
+      x: {
+        label: "Hora denuncia",
+      },
+      y: {
+        label: "Calle", 
+        labelAnchor: "top",
+      },
       grid: true,
       nice: true,
       line: true,
       color: {
-        legend: true,
+        type: "categorical",
         style: {
           fontSize: "14px",
         }
       },
-      width: 1000,
+      width: 800,
       height: 450,
-      marginLeft: 190,
-      marginTop: 0,
+      marginTop: 40,
+    marginLeft: 60,
+      marginBottom: 60,
     })
     d3.select('#chart_3').append(() => chart)
     });
